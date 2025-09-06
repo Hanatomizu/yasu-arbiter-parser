@@ -1,0 +1,9 @@
+[project]
+name = "arbiter-parser"
+version = "0.0.1"
+description = "Parser for Yet Another Sign Up"
+requires-python = ">=3.11"
+dependencies = [
+    "openpyxl>=3.1.5",
+    "pandas>=2.3.2",
+]
