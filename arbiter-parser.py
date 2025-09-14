@@ -22,9 +22,13 @@ def process(filename: str):
     with open(filename, 'r', newline='', encoding='utf-8') as inputfile:
         reader = csv.reader(inputfile)
         cnt = 0
+        vis = {}
         for row in reader:
             if row[0][0] == '-':
                 continue
+            if row[1][1:] in vis.keys():
+                continue
+            vis[row[1][1:]] = 1
             print(row)
             score[row[1][1:]] += 0.01
             cnt += 1
